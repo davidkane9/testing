@@ -6,5 +6,5 @@
 #' @export
 
 my_function <- function(x){
-  readr::parse_integer(x)
+  parse_integer(x)
 }
