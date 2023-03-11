@@ -12,7 +12,7 @@ RoxygenNote: 7.2.3
 Imports: 
     readr
 Remotes: 
-    PPBDS/tutorial.helpers    
+    PPBDS/primer.data    
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
