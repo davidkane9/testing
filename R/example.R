@@ -2,9 +2,9 @@
 #'
 #' @param x character variable
 #'
-#' @return numeric value
+#' @return returns x
 #' @export
 
 my_function <- function(x){
-  parse_integer(x)
+  x
 }

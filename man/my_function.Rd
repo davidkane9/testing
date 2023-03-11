@@ -7,10 +7,10 @@
 my_function(x)
 }
 \arguments{
-\item{x}{numeric variable}
+\item{x}{character variable}
 }
 \value{
-x squared
+returns x
 }
 \description{
 My Function
