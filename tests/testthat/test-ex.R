@@ -1,2 +1,2 @@
-library(tutorial.helpers)
+library(sessioninfo)
 

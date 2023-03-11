@@ -6,5 +6,5 @@
 #' @export
 
 my_function <- function(x){
-  readr::parse_number(x^2)
+  x^2
 }
