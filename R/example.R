@@ -1,10 +1,10 @@
 #' My Function
 #'
-#' @param x numeric variable
+#' @param x character variable
 #'
-#' @return x squared
+#' @return numeric value
 #' @export
 
 my_function <- function(x){
-  x^2
+  readr::parse_integer(x)
 }
