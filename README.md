@@ -8,9 +8,9 @@
 <!-- badges: end -->
 
 The purpose of this package is to provide a reproducible example of a
-problem with installing packages from Github when using Github Actions,
-and the resulting failure of R CMD check on Github, even for a package
-which works fine locally.
+problem with installing the `rstanarm` package using Github Actions, and
+the resulting failure of R CMD check on Github, even for a package which
+works fine locally.
 
 1)  In the DESCRIPTION we have:
 
@@ -32,12 +32,11 @@ use a high quality Github package for the example.
                  "2")
 
 `my_function()` just returns the input. The whole packages passes R CMD
-check locally with no NOTES/WARNINGS/ERRORS.
+check locally with no WARNINGS/ERRORS.
 
 3)  The package was created with all the (wonderful!) **usethis** tools,
     including `usethis::use_github_actions()`. But when the R CMD check
-    [runs](https://github.com/davidkane9/testing/actions/runs/4392864635/jobs/7692895359),
-    via Github Actions, on Github, we see this error:
+    [runs](), via Github Actions, on Github, we see this error:
 
 <!-- -->
 
@@ -64,9 +63,9 @@ check locally with no NOTES/WARNINGS/ERRORS.
       Error: Test failures
       Execution halted
 
-It is as if `tidyverse/readr` is never installed, despite its placement
-in the DESCRIPTION file. This is consistent with what I see in the [log
-file](https://github.com/davidkane9/testing/actions/runs/4392864635/jobs/7692895359):
+It is as if \`rstanarm\`\` is never installed, despite its placement in
+the DESCRIPTION file. This is consistent with what I see in the [log
+file]():
 
     Install/update packages
       ℹ Installing lockfile '.github/pkg.lock'
@@ -74,10 +73,6 @@ file](https://github.com/davidkane9/testing/actions/runs/4392864635/jobs/7692895
       → Will install 38 packages.
       → Will download 37 CRAN packages (10.03 MB).
       → Will download 1 package with unknown size.
-
-I *think* that the “1 package with unknow size” refers to
-`tidyverse/readr` but I don’t see any evidence that it is is ever
-downloaded or installed.
 
 Any ideas much appreciated!
 
