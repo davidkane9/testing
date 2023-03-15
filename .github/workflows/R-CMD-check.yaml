@@ -16,11 +16,11 @@ jobs:
       R_KEEP_PKG_SOURCE: yes
     steps:
 
-    # setup-renv is not as sophisticated (or as error prone?) as setup-r-dependencies,
-    # so, we need to install a handful of unbuntu binaries by hand. This is annoying!
-    # But it is also necessary because setup-r-dependencies, at least with our set up,
-    # does not using caching correctly. (Don't forget that you need to set cache-version
-    # to a number different from 1 if you want to blow away the old cache.)
+      # setup-renv is not as sophisticated (or as error prone?) as setup-r-dependencies,
+      # so, we need to install a handful of unbuntu binaries by hand. This is annoying!
+      # But it is also necessary because setup-r-dependencies, at least with our set up,
+      # does not using caching correctly. (Don't forget that you need to set cache-version
+      # to a number different from 1 if you want to blow away the old cache.)
 
       - name: Need to update everything first in order to catch moved packages
         run: sudo apt-get update
